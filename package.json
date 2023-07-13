@@ -1,0 +1,57 @@
+{
+  "name": "cv-vlad-popov",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://studentvlad5.github.io/cv_vlad/",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --all",
+    "eject": "react-scripts eject",
+    "lint:js": "eslint src/**/*.{js,jsx}"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "Этот проект был создан при помощи\r [Create React App](https://github.com/facebook/create-react-app). Для знакомства\r и настройки дополнительных возможностей\r [обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StudentVlad5/cv_vlad.git"
+  },
+  "keywords": [
+    "project",
+    "for",
+    "testing",
+    "results"
+  ],
+  "author": "Vlad Popoff",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/StudentVlad5/cv_vlad/issues"
+  }
+}
