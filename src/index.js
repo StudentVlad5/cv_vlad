@@ -2,7 +2,7 @@ import React from "react";
 // import { lazy } from 'react';
 import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-import  AppCV  from "./components/AppCV.jsx";
+import AppCV from "./components/AppCV/AppCV.jsx";
 
 import "./index.css";
 

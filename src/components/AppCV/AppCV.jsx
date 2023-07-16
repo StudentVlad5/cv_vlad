@@ -1,9 +1,70 @@
+import { SliderOfSertificate } from "../SliderOfSertificate/SladerOfSertificate"
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+import {ImgWrap, ItemWrap, ImgForTeam, ImgForTeamColor, JobItem, TitleItem, SocialsListLink, SocialsListItem, SocialsList} from "./AppCV.styled";
+
+import vlad from '../../images/person_photo/vlad_blackAndWhite.jpg';
+import vladColor from '../../images/person_photo/vlad_warm_color.jpg';
+import sprite from '../../images/sprite/sprite.svg';
+
 const AppCV = () => {
+    Aos.init();
     return (
    <div className="maincontainer">
         <aside className="sidebar">
             <div className="photo">
-                <img id="photo" src="" alt="Vlad"/>
+            <ItemWrap data-aos="flip-up" data-aos-delay="150">
+          <ImgWrap>
+            <ImgForTeam src={vlad} alt="vlad" />
+            <ImgForTeamColor src={vladColor} alt="vlad" />
+          </ImgWrap>
+          <TitleItem>Vlad Popov</TitleItem>
+          <JobItem>Full-Stack Developer</JobItem>
+          <SocialsList>
+            <SocialsListItem>
+              <SocialsListLink
+                href="https://github.com/StudentVlad5"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg width="20" height="20">
+                  <use href={sprite + '#github'}></use>
+                </svg>
+              </SocialsListLink>
+            </SocialsListItem>
+            <SocialsListItem>
+              <SocialsListLink
+                href="https://www.linkedin.com/in/vladyslav-popov-a491232a/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg width="20" height="20">
+                  <use href={sprite + '#linkedin'}></use>
+                </svg>
+              </SocialsListLink>
+            </SocialsListItem>
+            <SocialsListItem>
+              <SocialsListLink
+                href="https://t.me/Vinforam"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg width="20" height="20">
+                  <use href={sprite + '#telegram'}></use>
+                </svg>
+              </SocialsListLink>
+            </SocialsListItem>
+            <SocialsListItem>
+              <SocialsListLink href="mailto:vlad_np@ukr.net">
+                <svg width="20" height="20">
+                  <use href={sprite + '#envelop'}></use>
+                </svg>
+              </SocialsListLink>
+            </SocialsListItem>
+          </SocialsList>
+        </ItemWrap>
+                {/* <img id="photo" src="" alt="Vlad"/> */}
             </div>
 {/* <!--my contacts--> */}
                 <div className="contacts section">
@@ -36,6 +97,9 @@ const AppCV = () => {
                         <li className="skills-item"><span className="skills-item-text">Teamwork</span></li>
                         <li className="skills-item"><span className="skills-item-text">Ability to concede deadlines</span></li>
                     </ul>
+                </div>
+                <div className="sliderOfSertification section">
+                    <SliderOfSertificate/>
                 </div>
         </aside>
         <div className="right_side">
