@@ -43,7 +43,7 @@ const ImgWrap = styled.div`
   }
   &:hover ${ImgForTeamColor} {
     -webkit-transform: translateY(-100%);
-    transform: translateY(-101.5%);
+    transform: translateY(-101.25%);
     opacity: 1;
   }
 `;

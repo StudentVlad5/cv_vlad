@@ -4,8 +4,8 @@ import 'aos/dist/aos.css';
 
 import {ImgWrap, ItemWrap, ImgForTeam, ImgForTeamColor, JobItem, TitleItem, SocialsListLink, SocialsListItem, SocialsList} from "./AppCV.styled";
 
-import vlad from '../../images/person_photo/vlad_blackAndWhite.jpg';
-import vladColor from '../../images/person_photo/vlad_warm_color.jpg';
+import vlad from '../../images/person_photo/vlad_blackAndWhite.webp';
+import vladColor from '../../images/person_photo/vlad_warm_color.webp';
 import sprite from '../../images/sprite/sprite.svg';
 
 const AppCV = () => {
