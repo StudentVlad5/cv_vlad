@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/cv_vlad/static/css/main.480626d4.css",
-    "main.js": "/cv_vlad/static/js/main.65634155.js",
+    "main.css": "/cv_vlad/static/css/main.622d354a.css",
+    "main.js": "/cv_vlad/static/js/main.08423b93.js",
     "static/media/rozetka_mba.webp": "/cv_vlad/static/media/rozetka_mba.09880b4f75cee72da5a5.webp",
+    "static/media/filmoteka_project.webp": "/cv_vlad/static/media/filmoteka_project.2bec8113289975675b3b.webp",
     "static/media/GoIt_English_Sertificate.webp": "/cv_vlad/static/media/GoIt_English_Sertificate.de7a9895a578db2e7020.webp",
     "static/media/Science_of_ everyday_thinking.webp": "/cv_vlad/static/media/Science_of_ everyday_thinking.ad9e749194d8dd8e6913.webp",
     "static/media/GoIt_Sertificate.webp": "/cv_vlad/static/media/GoIt_Sertificate.18829d96b48326a9d1b3.webp",
+    "static/media/animal_welfare_project.webp": "/cv_vlad/static/media/animal_welfare_project.180cb798d0af78c06a5a.webp",
     "static/media/FullStack_addition.webp": "/cv_vlad/static/media/FullStack_addition.5ca66950b69616aa93a6.webp",
+    "static/media/barber_project.webp": "/cv_vlad/static/media/barber_project.73b8ab5cddc4fa96fbd8.webp",
     "static/media/Certificate_supplement_FullStack_developer_2.webp": "/cv_vlad/static/media/Certificate_supplement_FullStack_developer_2.6d3ba5bf68f8ef4b01d3.webp",
     "static/media/20286_Introduction_to_programming.webp": "/cv_vlad/static/media/20286_Introduction_to_programming.70c0534da841c6ddb973.webp",
+    "static/media/ice_cream_project.webp": "/cv_vlad/static/media/ice_cream_project.f4cc36397ad12a3bb988.webp",
     "static/media/kurs_ JavaScript ES6_without sertificate.webp": "/cv_vlad/static/media/kurs_ JavaScript ES6_without sertificate.2f03f8bf671119719c4f.webp",
     "static/media/vlad_warm_color.webp": "/cv_vlad/static/media/vlad_warm_color.268aa7ed8c294fbc1a5c.webp",
     "static/media/Certificate_supplement_FullStack_developer_3.webp": "/cv_vlad/static/media/Certificate_supplement_FullStack_developer_3.bb65d50e1e89e2781f14.webp",
@@ -19,11 +23,11 @@
     "static/media/stepik-certificate-3432-aa7cac9.webp": "/cv_vlad/static/media/stepik-certificate-3432-aa7cac9.b78e12be9ec2e6339696.webp",
     "static/media/sprite.svg": "/cv_vlad/static/media/sprite.0367c5dc17fd329c94021438004f9b66.svg",
     "index.html": "/cv_vlad/index.html",
-    "main.480626d4.css.map": "/cv_vlad/static/css/main.480626d4.css.map",
-    "main.65634155.js.map": "/cv_vlad/static/js/main.65634155.js.map"
+    "main.622d354a.css.map": "/cv_vlad/static/css/main.622d354a.css.map",
+    "main.08423b93.js.map": "/cv_vlad/static/js/main.08423b93.js.map"
   },
   "entrypoints": [
-    "static/css/main.480626d4.css",
-    "static/js/main.65634155.js"
+    "static/css/main.622d354a.css",
+    "static/js/main.08423b93.js"
   ]
 }
