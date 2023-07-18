@@ -130,7 +130,22 @@ const SocialsListLink = styled.a`
     fill: white;
   }
 `;
+const ButtonMovie = styled.button`
+  cursor: pointer;
+  padding: 2px;
+  color: gray;
+  /* color: ${(props) => props.theme.black}; */
 
+  & > *:hover,
+  & > *:focus {
+    fill: orangered;
+    /* fill: ${(props) => props.theme.accentRed}; */
+  }
+
+  & svg {
+    fill: orangered;
+  }
+`;
 export {
   ImgWrap,
   ItemWrap,
@@ -141,4 +156,5 @@ export {
   SocialsListLink,
   SocialsListItem,
   SocialsList,
+  ButtonMovie
 };

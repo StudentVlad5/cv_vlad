@@ -2,13 +2,16 @@ import { SliderOfSertificate } from "../SliderOfSertificate/SladerOfSertificate"
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from "react-router-dom";
+import { BiCameraMovie } from "react-icons/bi";
 
-import {ImgWrap, ItemWrap, ImgForTeam, ImgForTeamColor, JobItem, TitleItem, SocialsListLink, SocialsListItem, SocialsList} from "./AppCV.styled";
+import {ImgWrap, ItemWrap, ImgForTeam, ImgForTeamColor, JobItem, TitleItem, SocialsListLink, SocialsListItem, SocialsList, ButtonMovie} from "./AppCV.styled";
 
 import vlad from '../../images/person_photo/vlad_blackAndWhite.webp';
 import vladColor from '../../images/person_photo/vlad_warm_color.webp';
 import sprite from '../../images/sprite/sprite.svg';
 import { Project } from "components/Projects/Projects";
+import { openModalWindow } from "hooks/ModalWindow";
+import { ModalWindow } from '../ModalWindow/ModalWindow'
 
 const AppCV = () => {
     Aos.init();
@@ -19,6 +22,9 @@ const AppCV = () => {
           <div className="linkOfCV">
             <Link to="/Rezume_ukr_Vladyslav Popov.doc" target="_blank" download>CV UKR</Link>
             <Link to="/Resume_eng_Vladyslav_Popov.doc" target="_blank" download>CV ENG</Link>
+            <ButtonMovie  type="button" onClick={openModalWindow}>
+              <BiCameraMovie/>
+            </ButtonMovie>
           </div>
           <div className="photo">
             <ItemWrap data-aos="flip-up" data-aos-delay="150">
@@ -181,6 +187,7 @@ const AppCV = () => {
                 </div>
             </div>
         </div>
+        <ModalWindow/>
     </div>
 )}
 
