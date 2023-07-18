@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cv_vlad/static/css/main.622d354a.css",
-    "main.js": "/cv_vlad/static/js/main.08423b93.js",
+    "main.css": "/cv_vlad/static/css/main.a739ea20.css",
+    "main.js": "/cv_vlad/static/js/main.a7897aae.js",
     "static/media/rozetka_mba.webp": "/cv_vlad/static/media/rozetka_mba.09880b4f75cee72da5a5.webp",
     "static/media/filmoteka_project.webp": "/cv_vlad/static/media/filmoteka_project.2bec8113289975675b3b.webp",
     "static/media/GoIt_English_Sertificate.webp": "/cv_vlad/static/media/GoIt_English_Sertificate.de7a9895a578db2e7020.webp",
@@ -23,11 +23,11 @@
     "static/media/stepik-certificate-3432-aa7cac9.webp": "/cv_vlad/static/media/stepik-certificate-3432-aa7cac9.b78e12be9ec2e6339696.webp",
     "static/media/sprite.svg": "/cv_vlad/static/media/sprite.0367c5dc17fd329c94021438004f9b66.svg",
     "index.html": "/cv_vlad/index.html",
-    "main.622d354a.css.map": "/cv_vlad/static/css/main.622d354a.css.map",
-    "main.08423b93.js.map": "/cv_vlad/static/js/main.08423b93.js.map"
+    "main.a739ea20.css.map": "/cv_vlad/static/css/main.a739ea20.css.map",
+    "main.a7897aae.js.map": "/cv_vlad/static/js/main.a7897aae.js.map"
   },
   "entrypoints": [
-    "static/css/main.622d354a.css",
-    "static/js/main.08423b93.js"
+    "static/css/main.a739ea20.css",
+    "static/js/main.a7897aae.js"
   ]
 }
