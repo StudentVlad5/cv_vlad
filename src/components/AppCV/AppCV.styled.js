@@ -13,7 +13,7 @@ const ImgForTeamColor = styled.img`
   height: 250px;
   @media screen and (min-width: 490px) {
     width: 250px;
-    height: 330px;
+    height: 310px;
   }
 `;
 const ItemWrap = styled.div`
@@ -53,7 +53,7 @@ const ImgForTeam = styled.img`
   height: 250px;
   @media screen and (min-width: 490px) {
     width: 250px;
-    height: 330px;
+    height: 310px;
   }
 `;
 const TitleItem = styled.h4`

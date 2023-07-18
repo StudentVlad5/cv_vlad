@@ -1,19 +1,26 @@
 import { SliderOfSertificate } from "../SliderOfSertificate/SladerOfSertificate"
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 
 import {ImgWrap, ItemWrap, ImgForTeam, ImgForTeamColor, JobItem, TitleItem, SocialsListLink, SocialsListItem, SocialsList} from "./AppCV.styled";
 
 import vlad from '../../images/person_photo/vlad_blackAndWhite.webp';
 import vladColor from '../../images/person_photo/vlad_warm_color.webp';
 import sprite from '../../images/sprite/sprite.svg';
+import { Project } from "components/Projects/Projects";
 
 const AppCV = () => {
     Aos.init();
+    
     return (
    <div className="maincontainer">
         <aside className="sidebar">
-            <div className="photo">
+          <div className="linkOfCV">
+            <Link to="/Rezume_ukr_Vladyslav Popov.doc" target="_blank" download>CV UKR</Link>
+            <Link to="/Resume_eng_Vladyslav_Popov.doc" target="_blank" download>CV ENG</Link>
+          </div>
+          <div className="photo">
             <ItemWrap data-aos="flip-up" data-aos-delay="150">
           <ImgWrap>
             <ImgForTeam src={vlad} alt="vlad" />
@@ -21,6 +28,7 @@ const AppCV = () => {
           </ImgWrap>
           <TitleItem>Vlad Popov</TitleItem>
           <JobItem>Full-Stack Developer</JobItem>
+          <JobItem>Project Manager</JobItem>
           <SocialsList>
             <SocialsListItem>
               <SocialsListLink
@@ -64,18 +72,7 @@ const AppCV = () => {
             </SocialsListItem>
           </SocialsList>
         </ItemWrap>
-                {/* <img id="photo" src="" alt="Vlad"/> */}
-            </div>
-{/* <!--my contacts--> */}
-                <div className="contacts section">
-                    <h3 className="sidebar_title">Contacts</h3>
-                        <div className="phone"><span className="sidebarletter">C:</span>
-                            <a className="sidebarcontact" href="tel:+380671403070">+38 06 71 40 30 70</a>
-                        </div>
-                        <div className="mail"><span className="sidebarletter">E:</span>
-                            <a className="sidebarcontact"href="mailto:vlad_np@ukr.net">vlad_np@ukr.net</a>
-                        </div>
-                </div>
+          </div>
 {/* <!--tech skills--> */}
                 <div className="techskills section">
                     <h3 className="sidebar_title">Tech Skills</h3>
@@ -83,8 +80,11 @@ const AppCV = () => {
                         <li className="skills-item"><span className="skills-item-text">HTML5</span></li>
                         <li className="skills-item"><span className="skills-item-text">CSS3</span></li>
                         <li className="skills-item"><span className="skills-item-text">GIT</span></li>
-                        <li className="skills-item"><span className="skills-item-text">JavaScript</span></li>
-                        <li className="skills-item"><span className="skills-item-text">Photoshop</span></li>
+                        <li className="skills-item"><span className="skills-item-text">JAVASCRIPT</span></li>
+                        <li className="skills-item"><span className="skills-item-text">REACT</span></li>
+                        <li className="skills-item"><span className="skills-item-text">NODE JS</span></li>
+                        <li className="skills-item"><span className="skills-item-text">REACT-NATIVE</span></li>
+                        <li className="skills-item"><span className="skills-item-text">TYPESCRIPT</span></li>
                     </ul>
                 </div>
 {/* <!--soft skills--> */}
@@ -93,36 +93,30 @@ const AppCV = () => {
                     <ul className="techskillslist">
                         <li className="skills-item"><span className="skills-item-text">Scrum</span></li>
                         <li className="skills-item"><span className="skills-item-text">Agile</span></li>
-                        <li className="skills-item"><span className="skills-item-text">Critical thinking</span></li>
+                        <li className="skills-item"><span className="skills-item-text">Communication</span></li>
                         <li className="skills-item"><span className="skills-item-text">Teamwork</span></li>
                         <li className="skills-item"><span className="skills-item-text">Ability to concede deadlines</span></li>
+                        <li className="skills-item"><span className="skills-item-text">Time management</span></li>
+                        <li className="skills-item"><span className="skills-item-text">Stress management</span></li>
                     </ul>
                 </div>
+{/* <!--sertificates--> */}
                 <div className="sliderOfSertification section">
+                <h3 className="sidebar_title">Sertificates</h3>
                     <SliderOfSertificate/>
                 </div>
         </aside>
         <div className="right_side">
 {/* <!--  about_me_section     --> */}
             <div className="aboutme">
-                <h2 className="myjob">Front-End-Developer</h2>
+                <h2 className="myjob">Full-Stack-Developer</h2>
+                <h2 className="myjob">Project Manager</h2>
                 <h1 className="myname">Popov Vlad</h1>
-                    <p className="about_me_description">Project-owner, usiness analyst.Financial management. Organization of ccounting and reporting, internal financial control. Development of business plans, audit, analysis of results. Operational component of the department, personnel control.</p>
+                    <p className="about_me_description">Project-owner, usiness analyst.Financial management. Organization of ccounting and reporting, internal financial control. Development of business plans, audit, analysis of results. Operational component of the department, control of team schedule.</p>
 {/* <!--  my projects     --> */}
-            <div className="my_project">
+            <div className="my_project" style={{position:"relative"}}>
                     <h3 className="main-contact-title">Projects</h3>
-                        <ol className="my_project_list">
-                            <li className="my_project_item"><span className="my_project_text"><a href="https://hellenglish.goit.global">https://hellenglish.goit.global/</a><span className="letter_space">
-                                .............</span><span><span className="black_color_style">[ </span>HTML5, CSS3<span className="black_color_style"> ]</span></span></span>
-                            </li>
-                            <li className="my_project_item"><span className="my_project_text"><a href="https://cryptohub.goit.global">https://cryptohub.goit.global/</a><span className="letter_space">
-                                ..............</span><span className="black_color_style">[ </span> JavaScript<span className="black_color_style"> ]</span></span>
-                            </li>
-                            <li className="my_project_item"><span className="my_project_text"><a href="https://kidslike.goit.global">https://kidslike.goit.global/</a><span className="letter_space">
-                                 .................</span><span><span className="black_color_style">[ </span> React.js, Node.js<span className="black_color_style"> ]</span></span>
-                            </span>
-                                </li>
-                        </ol>
+                    <Project/>
             </div>
 {/* <!--  my work expierences     --> */}
             <div className="workexpiriens">
@@ -134,7 +128,7 @@ const AppCV = () => {
                         <ul className="description-of-duties">
                             <li className="duty_item">Help in social projects</li>
                             <li className="duty_item">Improve the level of programming</li>
-                            <li className="duty_item">Implementing own project</li>
+                            <li className="duty_item">Implementing own projects</li>
                         </ul>
                 </div>
 {/* <!--  company_2--> */}
@@ -156,6 +150,16 @@ const AppCV = () => {
                             <li className="duty_item">Searching for new partners</li>
                             <li className="duty_item">Organization of the operational process of ordering</li>
                             <li className="duty_item">Coordination of cooperation</li>
+                        </ul>
+                </div>
+  {/* <!--  company_4--> */}
+            <div className="company4 job">
+                    <h4 className="style_job">Manager  <span className="text_style_orange">Foxtrot LTD</span> </h4>
+                    <p className="style_period"> april 2004 -  september 2015   <span className="black_color_style_period"> | </span>  Ukraine</p>
+                        <ul className="description-of-duties">
+                            <li className="duty_item">Development of credit sales</li>
+                            <li className="duty_item">Development of credit programs</li>
+                            <li className="duty_item">Simplifying the process of buying on credit</li>
                         </ul>
                 </div>
             </div>
