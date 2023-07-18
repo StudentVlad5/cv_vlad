@@ -134,6 +134,7 @@ const ButtonMovie = styled.button`
   cursor: pointer;
   padding: 2px;
   color: gray;
+  border-radius: 5px;
   /* color: ${(props) => props.theme.black}; */
 
   & > *:hover,
@@ -143,7 +144,8 @@ const ButtonMovie = styled.button`
   }
 
   & svg {
-    fill: orangered;
+    fill: gray;
+
   }
 `;
 export {
@@ -156,5 +158,5 @@ export {
   SocialsListLink,
   SocialsListItem,
   SocialsList,
-  ButtonMovie
+  ButtonMovie,
 };
