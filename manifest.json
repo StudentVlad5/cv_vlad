@@ -4,11 +4,11 @@
   "icons": [
     {
       "src": "greenApple.webp",
-      "sizes": "192x192",
+      "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/webp"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
