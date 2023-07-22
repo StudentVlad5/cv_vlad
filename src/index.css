@@ -292,15 +292,13 @@ a {
   transition: opacity .3s linear 50ms, visibility .3s linear 50ms;
 }
 
-#popup-root {
-  &.is-hide {
+.is-hide {
       pointer-events: none;
       opacity: 0;
       visibility: hidden;
       display: none;
       width: 0;
       height: 0;
-  }
 }
 
   /* video */
