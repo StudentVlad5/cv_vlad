@@ -1,5 +1,17 @@
 @import-normalize; /* bring in normalize.css styles */
 
+@keyframes fadeInOut {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 body {
   background-color: #F5F7FA;
   font-family: 'Montserrat', normal;
@@ -264,17 +276,7 @@ a {
   height: 100%;
   border-radius: 10px;
 }
-@keyframes fadeInOut {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
 
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
 /* popup-root */
 
 #popup-root {
