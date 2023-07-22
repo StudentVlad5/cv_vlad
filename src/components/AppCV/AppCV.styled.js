@@ -1,4 +1,25 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const beat = keyframes`
+ 0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 const ImgForTeamColor = styled.img`
   display: block;
@@ -37,6 +58,7 @@ const ImgWrap = styled.div`
   overflow: hidden;
   width: 200px;
   height: 250px;
+  transition: all 0.2s ease-in;
   @media screen and (min-width: 490px) {
     width: 250px;
     height: 357px;
@@ -64,8 +86,6 @@ const TitleItem = styled.h4`
   font-weight: 700;
   text-transform: uppercase;
   color: white;
-  /* color: ${(props) => props.theme.black}; */
-
   margin-top: 15px;
   margin-bottom: 4px;
 
@@ -81,7 +101,6 @@ const JobItem = styled.h5`
   letter-spacing: 4%;
   font-weight: 500;
   color: grey;
-  /* color: ${(props) => props.theme.grey}; */
   margin: 10px;
 `;
 const SocialsList = styled.ul`
@@ -96,7 +115,7 @@ const SocialsListItem = styled.li`
   cursor: pointer;
   padding: 2px;
   list-style: none;
-  /* color: ${(props) => props.theme.black}; */
+  transition: all 0.2s ease-in;
   & > * {
     fill: white;
   }
@@ -106,24 +125,21 @@ const SocialsListItem = styled.li`
   & > *:hover,
   & > *:focus {
     fill: orangered;
-    /* fill: ${(props) => props.theme.accentRed}; */
   }
 
   & > * {
     fill: black;
-    /* fill: ${(props) => props.theme.black}; */
   }
 `;
 const SocialsListLink = styled.a`
   cursor: pointer;
   padding: 2px;
   color: black;
-  /* color: ${(props) => props.theme.black}; */
+  transition: all 0.2s ease-in;
 
   & > *:hover,
   & > *:focus {
     fill: orangered;
-    /* fill: ${(props) => props.theme.accentRed}; */
   }
 
   & svg {
@@ -135,7 +151,12 @@ const ButtonMovie = styled.button`
   padding: 2px;
   color: gray;
   border-radius: 5px;
-  /* color: ${(props) => props.theme.black}; */
+  transition: all 0.2s ease-in;
+  animation: ${beat} 1.2s infinite;
+&:focus,
+&:hover {
+  transform: scale(1.2);
+};
 
   & > *:hover,
   & > *:focus {
@@ -145,9 +166,11 @@ const ButtonMovie = styled.button`
 
   & svg {
     fill: gray;
-
+    transition: all 0.2s ease-in;
+    animation: ${beat} 1.2s infinite;
   }
 `;
+
 export {
   ImgWrap,
   ItemWrap,

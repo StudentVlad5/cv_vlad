@@ -15,9 +15,9 @@ const ItemContainer = styled.div`
   position: relative;
   display: block;
 
-  width: 95%;
+  width: calc(100vw * 0.8);
   height: auto;
-  max-height: 100vh;
+  height: calc(100vh * 0.8);
 
   margin-top: 50px;
   padding: 40px 20px;

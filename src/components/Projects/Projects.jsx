@@ -70,7 +70,7 @@ export const Project = () => {
       <img className="projectPics" src={Filmoteka_img} alt="filmoteka project" onClick={hendleClickProject}/>
     </SwiperSlide>
     <SwiperSlide>
-      <img className="projectPics" src={Ice_cream_img} alt="ce cream project" onClick={hendleClickProject}/>
+      <img className="projectPics" src={Ice_cream_img} alt="ice cream project" onClick={hendleClickProject}/>
     </SwiperSlide>
     </Swiper>
     </SlideContainer>

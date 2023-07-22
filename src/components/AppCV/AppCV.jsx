@@ -12,17 +12,24 @@ import sprite from '../../images/sprite/sprite.svg';
 import { Project } from "components/Projects/Projects";
 import { openModalWindow } from "hooks/ModalWindow";
 import { ModalWindow } from '../ModalWindow/ModalWindow'
+import { useState } from "react";
 
 const AppCV = () => {
     Aos.init();
-    
+    const [isPlaying, setPlaying] = useState(false);    
+
+    const hendleOpenModalWindow = (e) => {
+      setPlaying(true);
+      openModalWindow(e);
+    }
+
     return (
    <div className="maincontainer">
         <aside className="sidebar">
           <div className="linkOfCV">
             <Link to="/Rezume_ukr_Vladyslav Popov.doc" target="_blank" download>CV UKR</Link>
             <Link to="/Resume_eng_Vladyslav_Popov.doc" target="_blank" download>CV ENG</Link>
-            <ButtonMovie  type="button" onClick={openModalWindow}>
+            <ButtonMovie  type="button" onClick={(e)=>hendleOpenModalWindow(e)}>
               <BiCameraMovie/>
             </ButtonMovie>
           </div>
@@ -187,7 +194,7 @@ const AppCV = () => {
                 </div>
             </div>
         </div>
-        <ModalWindow/>
+        <ModalWindow isPlaying={isPlaying} setPlaying={setPlaying}/>
     </div>
 )}
 
