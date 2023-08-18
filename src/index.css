@@ -33,23 +33,24 @@ a {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  
   background: #FFFFFF;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
-
+}
 @media only screen and (min-width : 768px){
+  .maincontainer{
   width: 700px;
   flex-direction: row;
   margin: 10px auto;
-}
+  }}
 @media only screen and (min-width : 1024px){
+  .maincontainer{
   width: 800px;
   margin: 40px auto;
-}
+}}
 @media only screen and (min-width : 1224px){
+  .maincontainer{
   width: 1200px;
-}
-}
+}}
 /*sidebar section*/
 .sidebar{
   display: flex;
@@ -58,18 +59,20 @@ a {
   height: 100%;
   padding: 40px 0;
   background-color: #1E2939;
-  @media only screen and (min-width : 768px){
-    width:100%;
-  }
 }
+@media only screen and (min-width : 768px){
+  .sidebar{
+  width:100%;
+}}
 
 .section{
   margin: auto;
   min-width: 220px;
-  @media only screen and (min-width : 768px){
-    margin: 50px 0 0 50px
-  }
 }
+@media only screen and (min-width : 768px){
+  .section{
+  margin: 50px 0 0 50px
+}}
 .linkOfCV {
   display: flex;
   justify-content: center;
@@ -142,35 +145,41 @@ a {
   align-items: center;
   overflow: hidden;
   padding: 10px 50px;
-  @media only screen and (min-width : 768px){
-    padding: 50px 20px;
-  }
-  @media only screen and (min-width : 1024px){
-    padding: 75px 30px;
-  }
-  @media only screen and (min-width : 1224px){
-    padding: 100px 90px;
-  }
 }
+  @media only screen and (min-width : 768px){
+    .right_side {
+    padding: 50px 20px;
+  }}
+  @media only screen and (min-width : 1024px){
+    .right_side {
+    padding: 75px 30px;
+  }}
+  @media only screen and (min-width : 1224px){
+    .right_side {
+    padding: 100px 90px;
+  }}
 /*about me section*/
 .my_project{
   padding-bottom: 50px;
   width: 250px;
+}
   @media only screen and (min-width : 768px){
+    .my_project{
     width: 300px;
     padding-bottom: 0px;
-  }
+  }}
   @media only screen and (min-width : 1024px){
+    .my_project{
     width: 400px;
-  }
-}
+  }}
 .aboutme{
   width:100%;
   margin-bottom: 40px;
-  @media only screen and (min-width : 768px){
-    min-width:400px;
-  }
 }
+  @media only screen and (min-width : 768px){
+    .aboutme{
+    min-width:400px;
+  }}
 .myjob {
   font-style: normal;
   font-weight: bold;
@@ -208,11 +217,12 @@ a {
   width: 300px;
   height: 270px;
   border-radius: 10px;
+}
   @media only screen and (min-width : 768px){
+    .projectPics{
     width: 400px;
     height: 370px;
-  }
-}
+  }}
 /*my work expierences */
 .style_job {
   margin: 0 0 10px 0;
