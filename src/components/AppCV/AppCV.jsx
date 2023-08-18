@@ -124,7 +124,7 @@ const AppCV = () => {
             <div className="aboutme">
                 <h2 className="myjob">Full-Stack-Developer</h2>
                 <h2 className="myjob">Project Manager</h2>
-                <h1 className="myname">Popov Vlad</h1>
+                <h1 className="myname">Vlad Popov</h1>
                     <p className="about_me_description">Project-owner, usiness analyst.Financial management. Organization of ccounting and reporting, internal financial control. Development of business plans, audit, analysis of results. Operational component of the department, control of team schedule.</p>
 {/* <!--  my projects     --> */}
             <div className="my_project" style={{position:"relative"}}>
