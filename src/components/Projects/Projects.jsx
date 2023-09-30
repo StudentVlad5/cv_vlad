@@ -9,6 +9,8 @@ import Barber_img from 'images/projects/barber_project.webp';
 import Animal_welfare_img from 'images/projects/animal_welfare_project.webp';
 import Filmoteka_img from 'images/projects/filmoteka_project.webp';
 import Ice_cream_img from 'images/projects/ice_cream_project.webp';
+import Anastasia_img from 'images/projects/anastasya-studio.webp';
+import Salamandra_img from 'images/projects/salamandra.webp';
 
 export const Project = () => {
 
@@ -17,7 +19,7 @@ export const Project = () => {
     switch (e.target.alt) {
       case 'barbershop project':
         window
-          .open('https://studentvlad5.github.io/barbershop/', '_blank')
+          .open('https://barbershop-kyiv.vercel.app/', '_blank')
           .focus();
         break;
       case 'animal welfare project':
@@ -36,7 +38,23 @@ export const Project = () => {
       case 'filmoteka project':
         window
           .open(
-            'https://studentvlad5.github.io/filmoteka-js-project/',
+            'https://filmoteka-home.netlify.app/',
+            '_blank'
+          )
+          .focus();
+        break;
+      case 'Anastasia project':
+        window
+          .open(
+            'https://web-studio-yvh6.onrender.com/',
+            '_blank'
+          )
+          .focus();
+        break;
+      case 'salamandra project':
+        window
+          .open(
+            'https://salamandra-cafe.vercel.app/',
             '_blank'
           )
           .focus();
@@ -71,6 +89,12 @@ export const Project = () => {
     </SwiperSlide>
     <SwiperSlide>
       <img className="projectPics" src={Ice_cream_img} alt="ice cream project" onClick={hendleClickProject}/>
+    </SwiperSlide>
+    <SwiperSlide>
+      <img className="projectPics" src={Anastasia_img} alt="Anastasia project" onClick={hendleClickProject}/>
+    </SwiperSlide>
+    <SwiperSlide>
+      <img className="projectPics" src={Salamandra_img} alt="salamandra project" onClick={hendleClickProject}/>
     </SwiperSlide>
     </Swiper>
     </SlideContainer>
