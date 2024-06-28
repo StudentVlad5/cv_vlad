@@ -350,3 +350,6 @@ a {
     border-radius: 30px;
     overflow: hidden;
 }
+.swiper.swiper-initialized.swiper-horizontal {
+   overflow: hidden;
+}
