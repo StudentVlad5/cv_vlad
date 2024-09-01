@@ -1,201 +1,452 @@
-import { SliderOfSertificate } from "../SliderOfSertificate/SladerOfSertificate"
+import { SliderOfSertificate } from '../SliderOfSertificate/SladerOfSertificate';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { Link } from "react-router-dom";
-import { BiCameraMovie } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+import { BiCameraMovie } from 'react-icons/bi';
 
-import {ImgWrap, ItemWrap, ImgForTeam, ImgForTeamColor, JobItem, TitleItem, SocialsListLink, SocialsListItem, SocialsList, ButtonMovie} from "./AppCV.styled";
+import {
+  ImgWrap,
+  ItemWrap,
+  ImgForTeam,
+  ImgForTeamColor,
+  JobItem,
+  TitleItem,
+  SocialsListLink,
+  SocialsListItem,
+  SocialsList,
+  ButtonMovie,
+} from './AppCV.styled';
 
 import vlad from '../../images/person_photo/vlad_blackAndWhite.webp';
 import vladColor from '../../images/person_photo/vlad_warm_color.webp';
 import sprite from '../../images/sprite/sprite.svg';
-import { Project } from "components/Projects/Projects";
-import { openModalWindow } from "hooks/ModalWindow";
-import { ModalWindow } from '../ModalWindow/ModalWindow'
-import { useState } from "react";
+import { Project } from 'components/Projects/Projects';
+import { openModalWindow } from 'hooks/ModalWindow';
+import { ModalWindow } from '../ModalWindow/ModalWindow';
+import { useState } from 'react';
 
 const AppCV = () => {
-    Aos.init();
-    const [isPlaying, setPlaying] = useState(false);    
+  Aos.init();
+  const [isPlaying, setPlaying] = useState(false);
 
-    const hendleOpenModalWindow = (e) => {
-      setPlaying(true);
-      openModalWindow(e);
-    }
+  const techSkills = [
+    'Figma',
+    'Next Js',
+    'React',
+    'Node',
+    'JavaScript',
+    'Express',
+    'HTML',
+    'CSS',
+    'Parcel',
+    'GitHub',
+    'MongoDB',
+    'Firebase',
+  ];
+  const softSkills = [
+    'Communication Skills',
+    'Teamwork',
+    'Hard Working',
+    'Problem Solving',
+    'Project Management Skills',
+    'Agile Software Development',
+    'Business Operations',
+  ];
+  const details = [
+    'Visa sponsorship is not required',
+    'Residents permit',
+    'Zaandam, Netherlands',
+  ];
+  const moreDetails = {
+    Nationality: 'Ukrainian',
+    License: ['B', 'C'],
+    Languages: {
+      Ukraine: 'native',
+      Russian: 'native',
+      English: 'intermediate',
+    },
+  };
+  const moreDetailsKeys = Object.keys(moreDetails);
 
-    return (
-   <div className="maincontainer">
-        <aside className="sidebar">
-          <div className="linkOfCV">
-            <Link to="/Rezume_ukr_Vladyslav Popov.doc" target="_blank" download>CV UKR</Link>
-            <Link to="/Resume_eng_Vladyslav_Popov.doc" target="_blank" download>CV ENG</Link>
-            <ButtonMovie  type="button" onClick={(e)=>hendleOpenModalWindow(e)}>
-              <BiCameraMovie/>
-            </ButtonMovie>
-          </div>
-          <div className="photo">
-            <ItemWrap data-aos="flip-up" data-aos-delay="150">
-          <ImgWrap>
-            <ImgForTeam src={vlad} alt="vlad" />
-            <ImgForTeamColor src={vladColor} alt="vlad" />
-          </ImgWrap>
-          <TitleItem>Vlad Popov</TitleItem>
-          <JobItem>Full-Stack Developer</JobItem>
-          <JobItem>Project Manager</JobItem>
-          <SocialsList>
-            <SocialsListItem>
-              <SocialsListLink
-                href="https://github.com/StudentVlad5"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg width="20" height="20">
-                  <use href={sprite + '#github'}></use>
-                </svg>
-              </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-              <SocialsListLink
-                href="https://www.linkedin.com/in/vladyslav-popov-a491232a/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg width="20" height="20">
-                  <use href={sprite + '#linkedin'}></use>
-                </svg>
-              </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-              <SocialsListLink
-                href="https://t.me/Vinforam"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg width="20" height="20">
-                  <use href={sprite + '#telegram'}></use>
-                </svg>
-              </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-              <SocialsListLink href="mailto:vlad_np@ukr.net">
-                <svg width="20" height="20">
-                  <use href={sprite + '#envelop'}></use>
-                </svg>
-              </SocialsListLink>
-            </SocialsListItem>
-          </SocialsList>
-        </ItemWrap>
-          </div>
-{/* <!--tech skills--> */}
-                <div className="techskills section">
-                    <h3 className="sidebar_title">Tech Skills</h3>
-                    <ul className="techskillslist">
-                        <li className="skills-item"><span className="skills-item-text">HTML5</span></li>
-                        <li className="skills-item"><span className="skills-item-text">CSS3</span></li>
-                        <li className="skills-item"><span className="skills-item-text">GIT</span></li>
-                        <li className="skills-item"><span className="skills-item-text">JAVASCRIPT</span></li>
-                        <li className="skills-item"><span className="skills-item-text">REACT</span></li>
-                        <li className="skills-item"><span className="skills-item-text">NODE JS</span></li>
-                        <li className="skills-item"><span className="skills-item-text">REACT-NATIVE</span></li>
-                        <li className="skills-item"><span className="skills-item-text">TYPESCRIPT</span></li>
-                    </ul>
-                </div>
-{/* <!--soft skills--> */}
-                <div className="softskills section">
-                    <h3 className="sidebar_title">Soft Skills</h3>
-                    <ul className="techskillslist">
-                        <li className="skills-item"><span className="skills-item-text">Scrum</span></li>
-                        <li className="skills-item"><span className="skills-item-text">Agile</span></li>
-                        <li className="skills-item"><span className="skills-item-text">Communication</span></li>
-                        <li className="skills-item"><span className="skills-item-text">Teamwork</span></li>
-                        <li className="skills-item"><span className="skills-item-text">Ability to concede deadlines</span></li>
-                        <li className="skills-item"><span className="skills-item-text">Time management</span></li>
-                        <li className="skills-item"><span className="skills-item-text">Stress management</span></li>
-                    </ul>
-                </div>
-{/* <!--sertificates--> */}
-                <div className="sliderOfSertification section">
-                <h3 className="sidebar_title">Sertificates</h3>
-                    <SliderOfSertificate/>
-                </div>
-        </aside>
-        <div className="right_side">
-{/* <!--  about_me_section     --> */}
-            <div className="aboutme">
-                <h2 className="myjob">Full-Stack-Developer</h2>
-                <h2 className="myjob">Project Manager</h2>
-                <h1 className="myname">Vlad Popov</h1>
-                    <p className="about_me_description">Project-owner, usiness analyst.Financial management. Organization of ccounting and reporting, internal financial control. Development of business plans, audit, analysis of results. Operational component of the department, control of team schedule.</p>
-{/* <!--  my projects     --> */}
-            <div className="my_project" style={{position:"relative"}}>
-                    <h3 className="main-contact-title">Projects</h3>
-                    <Project/>
-            </div>
-{/* <!--  my work expierences     --> */}
-            <div className="workexpiriens">
-                <h3 className="main-contact-title">Work Experience</h3>
-{/* <!--  company_1--> */}
-                <div className="company1 job">
-                    <h4 className="style_job">Front-End Developer <span className="text_style_orange">Freelance</span></h4>
-                    <p className="style_period">January 2022 - up to now <span className="black_color_style_period">   | </span>  Ukraine</p>
-                        <ul className="description-of-duties">
-                            <li className="duty_item">Help in social projects</li>
-                            <li className="duty_item">Improve the level of programming</li>
-                            <li className="duty_item">Implementing own projects</li>
-                        </ul>
-                </div>
-{/* <!--  company_2--> */}
-                <div className="company2 job">
-                    <h4 className="style_job">Manager <span className="text_style_orange">RozetkaUa LTD</span></h4>
-                    <p className="style_period">May 2016 - up to now   <span className="black_color_style_period"> | </span>   Ukraine</p>
-                        <ul className="description-of-duties">
-                            <li className="duty_item">Development of a strategic plan</li>
-                            <li className="duty_item">Projects of increase sales</li>
-                            <li className="duty_item">Communication with project customers</li>
-                            <li className="duty_item">Analysis of results</li>
-                        </ul>
-                </div>
-{/* <!--  company_3--> */}
-                <div className="company3 job">
-                    <h4 className="style_job">Manager  <span className="text_style_orange">UMS Polyester LTD</span> </h4>
-                    <p className="style_period">September 2015 - May 2016   <span className="black_color_style_period"> | </span>  Ukraine</p>
-                        <ul className="description-of-duties">
-                            <li className="duty_item">Searching for new partners</li>
-                            <li className="duty_item">Organization of the operational process of ordering</li>
-                            <li className="duty_item">Coordination of cooperation</li>
-                        </ul>
-                </div>
-  {/* <!--  company_4--> */}
-            <div className="company4 job">
-                    <h4 className="style_job">Manager  <span className="text_style_orange">Foxtrot LTD</span> </h4>
-                    <p className="style_period"> april 2004 -  september 2015   <span className="black_color_style_period"> | </span>  Ukraine</p>
-                        <ul className="description-of-duties">
-                            <li className="duty_item">Development of credit sales</li>
-                            <li className="duty_item">Development of credit programs</li>
-                            <li className="duty_item">Simplifying the process of buying on credit</li>
-                        </ul>
-                </div>
-            </div>
-{/* <!-- my education--> */}
-                <div className="education">
-                    <h3 className="main-contact-title">Education</h3>
-{/* <!--  education_1--> */}
-                    <div className="education1 educate">
-                        <h4 className="style_education">Institute of Business Management</h4>
-                        <h5 className="style_specialty">Audit, economics, accounting</h5>
-                        <p className="style_period">September 1993 - June 1998   <span className="black_color_style_education"> | </span>   Ukraine</p>
-                    </div>
-{/* <!--  education_2--> */}
-                    <div className="education2 educate">
-                        <h4 className="style_education">ICFM</h4>
-                        <h5 className="style_specialty">ICFM. International certificate of the Institute of Certified Financial Managers</h5>
-                        <p className="style_period">March 2011 - September 2012   <span className="black_color_style_education"> | </span> Ukraine</p>
-                    </div>
-                </div>
-            </div>
+  const hendleOpenModalWindow = e => {
+    setPlaying(true);
+    openModalWindow(e);
+  };
+
+  return (
+    <div className="maincontainer">
+      <aside className="sidebar">
+        <div className="linkOfCV">
+          <Link
+            to="/Vladyslav_Popov_-_Full_Stack_Web_Developer,_Frontend_Web_Developer.pdf"
+            target="_blank"
+            download
+          >
+            Upload CV
+          </Link>
+          <ButtonMovie type="button" onClick={e => hendleOpenModalWindow(e)}>
+            <BiCameraMovie />
+            About me
+          </ButtonMovie>
         </div>
-        <ModalWindow isPlaying={isPlaying} setPlaying={setPlaying}/>
-    </div>
-)}
+        <div className="photo">
+          <ItemWrap data-aos="flip-up" data-aos-delay="150">
+            <ImgWrap>
+              <ImgForTeam src={vlad} alt="vlad" />
+              <ImgForTeamColor src={vladColor} alt="vlad" />
+            </ImgWrap>
+            <TitleItem>Vlad Popov</TitleItem>
+            <JobItem>Full-Stack Web Developer</JobItem>
+            <JobItem>Frontend Web Developer</JobItem>
+            <SocialsList>
+              <SocialsListItem>
+                <SocialsListLink
+                  href="https://github.com/StudentVlad5"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <svg width="20" height="20">
+                    <use href={sprite + '#github'}></use>
+                  </svg>
+                </SocialsListLink>
+              </SocialsListItem>
+              <SocialsListItem>
+                <SocialsListLink
+                  href="https://www.linkedin.com/in/vladyslav-popov-a491232a/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <svg width="20" height="20">
+                    <use href={sprite + '#linkedin'}></use>
+                  </svg>
+                </SocialsListLink>
+              </SocialsListItem>
+              <SocialsListItem>
+                <SocialsListLink
+                  href="https://t.me/Vinforam"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <svg width="20" height="20">
+                    <use href={sprite + '#telegram'}></use>
+                  </svg>
+                </SocialsListLink>
+              </SocialsListItem>
+              <SocialsListItem>
+                <SocialsListLink href="mailto:vlad_np@ukr.net">
+                  <svg width="20" height="20">
+                    <use href={sprite + '#envelop'}></use>
+                  </svg>
+                </SocialsListLink>
+              </SocialsListItem>
+            </SocialsList>
+          </ItemWrap>
+        </div>
+        {/* <!--details--> */}
+        <div className="techskills section">
+          <h3 className="sidebar_title">Details</h3>
+          <ul className="techskillslist">
+            {details &&
+              details.map(item => (
+                <li className="skills-item" key={item}>
+                  <span className="skills-item-text">{item}</span>
+                </li>
+              ))}
+          </ul>
+        </div>
 
-export default AppCV
+        {/* <!--tech skills--> */}
+        <div className="techskills section">
+          <h3 className="sidebar_title">Tech Skills</h3>
+          <ul className="techskillslist">
+            {techSkills &&
+              techSkills.map(item => (
+                <li className="skills-item" key={item}>
+                  <span className="skills-item-text">{item}</span>
+                </li>
+              ))}
+          </ul>
+        </div>
+        {/* <!--soft skills--> */}
+        <div className="softskills section">
+          <h3 className="sidebar_title">Soft Skills</h3>
+          <ul className="techskillslist">
+            {softSkills &&
+              softSkills.map(item => {
+                return (
+                  <li className="skills-item" key={item}>
+                    <span className="skills-item-text">{item}</span>
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
+        {/* <!--sertificates--> */}
+        <div className="sliderOfSertification section">
+          <h3 className="sidebar_title">Sertificates</h3>
+          <SliderOfSertificate />
+        </div>
+      </aside>
+      <div className="right_side">
+        {/* <!--  about_me_section     --> */}
+        <div className="aboutme">
+          <h2 className="myjob">Full-Stack Web Developer</h2>
+          <h2 className="myjob">Frontend Web Developer</h2>
+          <h1 className="myname">Vlad Popov</h1>
+          <p className="about_me_description">
+            Motivated frontend/full stack developer with expertise in HTML, CSS,
+            React, Node, Next, JavaScript, Express and experienced in creating
+            various projects. Proficient in REACT / stack MERN for dynamic and
+            interactive web application development. Committed to continuous
+            learning and seeking opportunities to contribute to innovate
+            organization.
+          </p>
+          <p className="about_me_description">
+            I'm actually an optimist, which are building a new life and career
+            after losing home.
+          </p>
+          {/* <!--more information --> */}
+          <div className="moreDetail">
+            {moreDetailsKeys &&
+              moreDetailsKeys.map(item => {
+                if (typeof moreDetails[item] === 'string') {
+                  return (
+                    <div key={item}>
+                      <h4 className="style_education">{item}</h4>
+                      <p className="style_period">
+                        <span className="black_color_style_education">
+                          {moreDetails[item]}
+                        </span>
+                      </p>
+                    </div>
+                  );
+                } else if (Array.isArray(moreDetails[item])) {
+                  return (
+                    <div key={item}>
+                      <h4 className="style_education">{item}</h4>
+                      <p className="style_period">
+                        {moreDetails[item].map(it => (
+                          <span
+                            key={it}
+                            className="black_color_style_education"
+                          >
+                            {it + ' '}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
+                  );
+                } else {
+                  let keyItem = Object.keys(moreDetails[item]);
+                  return (
+                    <div key={item}>
+                      <h4 className="style_education">{item}</h4>
+                      {keyItem.map(it => (
+                        <p className="style_period" key={it}>
+                          <span className="black_color_style_education">
+                            {it + ': ' + moreDetails[item][it]}
+                          </span>
+                        </p>
+                      ))}
+                    </div>
+                  );
+                }
+              })}
+          </div>
+          {/* <!--  my projects     --> */}
+          <div className="my_project" style={{ position: 'relative' }}>
+            <h3 className="main-contact-title">Projects</h3>
+            <Project />
+          </div>
+          {/* <!--  my work expierences     --> */}
+          <div className="workexpiriens">
+            <h3 className="main-contact-title">Work Experience</h3>
+            {/* <!--  company_1--> */}
+            <div className="company1 job">
+              <h4 className="style_job">
+                Full-Stack Web Developer{' '}
+                <span className="text_style_orange">at Brand MAZE</span>
+              </h4>
+              <p className="text_style_about">
+                {' '}
+                IT company for website design and development
+              </p>
+              <p className="style_period">
+                2022 - up to now{' '}
+                <span className="black_color_style_period"> | </span> Ukraine
+              </p>
+              <p className="text_style_blue">
+                <Link
+                  to="https://brand-maze.com/"
+                  alt="Brand Maze"
+                  target="_blank"
+                >
+                  https://brand-maze-agency.vercel.app/
+                </Link>
+              </p>
+
+              <ul className="description-of-duties">
+                <li className="duty_item">
+                  Development of web applications with modern, responsive user
+                  interface, achieving satisfaction rating of 100%
+                </li>
+                <li className="duty_item">
+                  Collaboration with other developers to ensure code consistency
+                  and best practices. More than 60 completed projects (details
+                  at the Portfolio links)
+                </li>
+              </ul>
+            </div>
+            {/* <!--  company_2--> */}
+            <div className="company2 job">
+              <h4 className="style_job">
+                Project manager{' '}
+                <span className="text_style_orange">at RozetkaUa LTD</span>
+              </h4>
+              <p className="text_style_about"> online marketplace</p>
+              <p className="style_period">
+                2016 - up to now{' '}
+                <span className="black_color_style_period"> | </span> Ukraine
+              </p>
+              <p className="text_style_blue">
+                <Link
+                  to="https://rozetka.com.ua/ua/"
+                  alt="Rozetka"
+                  target="_blank"
+                >
+                  https://rozetka.com.ua/ua/
+                </Link>
+              </p>
+              <ul className="description-of-duties">
+                <li className="duty_item">
+                  Agile methodology and tools usage to ensure successful product
+                  launch, leading to 25% increase in sales
+                </li>
+                <li className="duty_item">
+                  Implementation of payment methods for sellers on the
+                  marketplace: payment by Visa & MasterCard, Apple & Google pay
+                  and loans
+                </li>
+              </ul>
+            </div>
+            {/* <!--  company_3--> */}
+            <div className="company3 job">
+              <h4 className="style_job">
+                Project manager{' '}
+                <span className="text_style_orange"> at ALFA LLC</span>{' '}
+              </h4>
+              <p className="text_style_about">
+                {' '}
+                production of boats and polyester products
+              </p>
+              <p className="style_period">
+                2015 - 2016{' '}
+                <span className="black_color_style_period"> | </span> Ukraine
+              </p>
+              <ul className="description-of-duties">
+                <li className="duty_item">
+                  Team of sales representatives leading to exceed sales targets
+                  by 100%, resulting in increased profits for the company
+                </li>
+                <li className="duty_item">
+                  Establishment of a new sales channel that increased sales by
+                  50% within the first year of implementation
+                </li>
+              </ul>
+            </div>
+            {/* <!--  company_4--> */}
+            <div className="company4 job">
+              <h4 className="style_job">
+                Project Manager{' '}
+                <span className="text_style_orange">at Foxtrot LTD</span>{' '}
+              </h4>
+              <p className="text_style_about">
+                {' '}
+                retail network of sales of electronics and household appliances
+              </p>
+              <p className="style_period">
+                {' '}
+                2004 - 2015{' '}
+                <span className="black_color_style_period"> | </span> Ukraine
+              </p>
+              <p className="text_style_blue">
+                <Link
+                  to="https://www.foxtrot.com.ua/"
+                  alt="Foxtrot"
+                  target="_blank"
+                >
+                  https://www.foxtrot.com.ua/
+                </Link>
+              </p>
+              <ul className="description-of-duties">
+                <li className="duty_item">
+                  Implementation of a complex software project with a budget of
+                  $15 million/year, completing it on time and within budget
+                </li>
+                <li className="duty_item">
+                  Development and implementation of new tools to increase the
+                  company's sales
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* <!-- my education--> */}
+          <div className="education">
+            <h3 className="main-contact-title">Education</h3>
+            {/* <!--  education_1--> */}
+            <div className="education1 educate">
+              <h4 className="style_education">
+                Institute of Business Management
+              </h4>
+              <h5 className="style_specialty">
+                {' '}
+                Master of Business Administration (MBA), Finance, Accounting and
+                Audit, Institute of Business Management, Ukraine
+              </h5>
+              <p className="style_period">
+                1993 - 1998{' '}
+                <span className="black_color_style_education"> | </span> Ukraine
+              </p>
+            </div>
+            {/* <!--  education_2--> */}
+            <div className="education2 educate">
+              <h4 className="style_education">ICFM</h4>
+              <h5 className="style_specialty">
+                ICFM. International certificate of the Institute of Certified
+                Financial Managers
+              </h5>
+              <p className="style_period">
+                2011 - 2012{' '}
+                <span className="black_color_style_education"> | </span> Ukraine
+              </p>
+            </div>
+            {/* <!--  education_3--> */}
+            <div className="education3 educate">
+              <h4 className="style_education">GoIT</h4>
+              <h5 className="style_specialty">
+                diploma FS_12607, Full Stack Developer
+              </h5>
+              <p className="style_period">
+                2022 - 2023{' '}
+                <span className="black_color_style_education"> | </span> Ukraine
+              </p>
+            </div>
+            {/* <!--  education_4--> */}
+            <div className="education4 educate">
+              <h4 className="style_education">Hillel</h4>
+              <h5 className="style_specialty">diploma 61488832, Next JS</h5>
+              <p className="style_period">
+                2024 - 2024{' '}
+                <span className="black_color_style_education"> | </span> Ukraine
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ModalWindow isPlaying={isPlaying} setPlaying={setPlaying} />
+    </div>
+  );
+};
+
+export default AppCV;

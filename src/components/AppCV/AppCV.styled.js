@@ -30,12 +30,8 @@ const ImgForTeamColor = styled.img`
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 100%;
-  height: 250px;
-  @media screen and (min-width: 490px) {
-    width: 250px;
-    height: 310px;
-  }
+  width: 200px;
+  height: 200px;
 `;
 const ItemWrap = styled.div`
   display: flex;
@@ -57,26 +53,20 @@ const ImgWrap = styled.div`
   cursor: pointer;
   overflow: hidden;
   width: 200px;
-  height: 250px;
+  height: 200px;
   transition: all 0.2s ease-in;
-  @media screen and (min-width: 490px) {
-    width: 250px;
-    height: 357px;
-  }
+  border-radius: 50%;
+
   &:hover ${ImgForTeamColor} {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-101.25%);
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
     opacity: 1;
   }
 `;
 
 const ImgForTeam = styled.img`
-  width: 100%;
-  height: 250px;
-  @media screen and (min-width: 490px) {
-    width: 250px;
-    height: 310px;
-  }
+  width: 200px;
+  height: 200px;
 `;
 const TitleItem = styled.h4`
   font-family: "Inter", sans-serif;

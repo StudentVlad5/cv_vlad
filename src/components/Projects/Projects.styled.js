@@ -17,7 +17,7 @@ const SlideContainer = styled.div`
   justify-content: center;
   align-items: center;
   font-style: normal;
-  max-height: 400px;
+  min-height: 400px;
   overflow: hidden;
   animation: ${scaleInCenter} 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   cursor: pointer;
