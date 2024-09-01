@@ -305,7 +305,7 @@ const AppCV = () => {
               </h4>
               <p className="text_style_about"> online marketplace</p>
               <p className="style_period">
-                2016 - up to now{' '}
+                2018 - up to now{' '}
                 <span className="black_color_style_period"> | </span> Ukraine
               </p>
               <p className="text_style_blue">
@@ -340,7 +340,7 @@ const AppCV = () => {
                 production of boats and polyester products
               </p>
               <p className="style_period">
-                2015 - 2016{' '}
+                2017 - 2018{' '}
                 <span className="black_color_style_period"> | </span> Ukraine
               </p>
               <ul className="description-of-duties">
@@ -366,7 +366,7 @@ const AppCV = () => {
               </p>
               <p className="style_period">
                 {' '}
-                2004 - 2015{' '}
+                2004 - 2017{' '}
                 <span className="black_color_style_period"> | </span> Ukraine
               </p>
               <p className="text_style_blue">
