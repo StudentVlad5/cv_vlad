@@ -29,6 +29,7 @@ a {
 
 .maincontainer {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -59,9 +60,9 @@ a {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
   padding: 40px 0;
   background-color: #1e2939;
+  align-self: stretch;
 }
 @media only screen and (min-width: 768px) {
   .sidebar {
@@ -74,9 +75,6 @@ a {
   min-width: 220px;
 }
 @media only screen and (min-width: 768px) {
-  .section {
-    margin: 50px 0 0 50px;
-  }
 }
 .linkOfCV {
   display: flex;
@@ -155,7 +153,7 @@ a {
 @media only screen and (min-width: 768px) {
   .right_side {
     padding: 50px 20px;
-      width: 100%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -168,7 +166,6 @@ a {
 .my_project {
   padding-bottom: 50px;
   min-width: 350px;
-
 }
 @media only screen and (min-width: 768px) {
   .my_project {
