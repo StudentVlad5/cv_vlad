@@ -2,7 +2,7 @@
   "name": "cv-vlad-popov",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://studentvlad5.github.io/cv_vlad/",
+  "homepage": "https://cv-vlad.vercel.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
