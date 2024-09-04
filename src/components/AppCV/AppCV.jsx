@@ -54,7 +54,7 @@ const AppCV = () => {
   ];
   const details = [
     'Visa sponsorship is not required',
-    'Residents permit',
+    'Residence permit',
     'Zaandam, Netherlands',
   ];
   const moreDetails = {
