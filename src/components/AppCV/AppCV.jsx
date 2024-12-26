@@ -55,7 +55,7 @@ const AppCV = () => {
   const details = [
     'Visa sponsorship is not required',
     'Residence permit',
-    'Zaandam, Netherlands',
+    'Zwaag (Hoorn), Netherlands',
   ];
   const moreDetails = {
     Nationality: 'Ukrainian',
@@ -63,7 +63,7 @@ const AppCV = () => {
     Languages: {
       Ukraine: 'native',
       Russian: 'native',
-      English: 'intermediate',
+      English: 'upper intermediate',
     },
   };
   const moreDetailsKeys = Object.keys(moreDetails);
@@ -193,18 +193,78 @@ const AppCV = () => {
           <h2 className="myjob">Full-Stack Web Developer</h2>
           <h2 className="myjob">Frontend Web Developer</h2>
           <h1 className="myname">Vlad Popov</h1>
-          <p className="about_me_description">
-            Motivated frontend/full stack developer with expertise in HTML, CSS,
-            React, Node, Next, JavaScript, Express and experienced in creating
-            various projects. Proficient in REACT / stack MERN for dynamic and
-            interactive web application development. Committed to continuous
-            learning and seeking opportunities to contribute to innovate
-            organization.
-          </p>
-          <p className="about_me_description">
-            I'm actually an optimist, which are building a new life and career
-            after losing home.
-          </p>
+          <div className="about_me_description">
+            <p>
+              I am a{' '}
+              <b>
+                <i>highly motivated individual</i>
+              </b>{' '}
+              with a strong passion for web development, and I believe my skills
+              and experience align well with the requirements of my future
+              projects. A few months ago, I relocated to the Netherlands. Since
+              then, I{' '}
+              <b>
+                <i>have obtained work permission</i>
+              </b>
+              , found an apartment, and am now looking for a position where I
+              can fully apply and further develop my skills in the IT field.{' '}
+            </p>
+            <p>
+              {' '}
+              This challenging period has only strengthened my determination to
+              succeed and make a meaningful contribution in a professional
+              setting. I bring hands-on experience from various projects,
+              including startups and high-responsibility corporate initiatives.
+              Throughout my career, I have consistently delivered projects of
+              varying complexity, always meeting or exceeding expectations. My
+              approach to development is user-focused, ensuring that web
+              applications are not only functional but also intuitive and easy
+              to navigate.
+            </p>{' '}
+            <p>
+              {' '}
+              Although my previous experience is based in Ukraine, I am fully
+              prepared and eager{' '}
+              <b>
+                <i> to embrace new challenges </i>
+              </b>{' '}
+              and adapt to different environments. My technical expertise
+              includes{' '}
+              <b>
+                <i>
+                  {' '}
+                  MERN stack, JavaScript, HTML, CSS, React, Next.js, Node.js,
+                  Firebase, MongoDB and Express.
+                </i>
+              </b>{' '}
+              I am passionate about staying up-to-date with the latest
+              advancements in programming and am committed to continuous
+              learning and professional growth. My enthusiasm for coding drives
+              me to constantly improve, and I am confident that I can bring this
+              dedication to my new role.{' '}
+            </p>
+            <p>
+              {' '}
+              When asked why I would like to work at a particular company, I
+              sincerely believe that the most important factors for me are the
+              relationships within the team and clear work processes, rather
+              than the company&apos;s ranking or its industry. With the right
+              mindset, projects can be interesting and exciting in any field:
+              whether it&apos;s cryptocurrency, gaming, finance, healthcare,
+              e-commerce, and so on. If an employer expects a candidate to
+              consider only one company, that would mean the candidate has only
+              applied to that one company, which is not the case.
+            </p>
+            <p>
+              {' '}
+              Currently,{' '}
+              <i>
+                <b>I am open to job offers</b>
+              </i>
+              . If you&apos;re interested, I would be happy to continue the
+              conversation through any communication channel.
+            </p>
+          </div>
           {/* <!--more information --> */}
           <div className="moreDetail">
             {moreDetailsKeys &&
